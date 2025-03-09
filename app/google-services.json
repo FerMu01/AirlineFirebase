@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "789517482155",
+    "project_id": "airlines-225b1",
+    "storage_bucket": "airlines-225b1.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:789517482155:android:fcbbefb5758259ea9a5fee",
+        "android_client_info": {
+          "package_name": "com.example.appairlines"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDkVDIZXNby-ZT7reU5hgabrLcDk5kWyiY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
