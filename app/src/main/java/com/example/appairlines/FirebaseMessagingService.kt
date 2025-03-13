@@ -26,16 +26,18 @@ class MyFirebaseMessagingService : FirebaseMessagingService() {
     }
 
     private fun showNotification(title: String, body: String) {
-        NotificationCompat.Builder(this, "canal_importante").apply {
-            setSmallIcon(R.drawable.ic_notification)
-            setContentTitle(title)
-            setContentText(body)
-            priority = NotificationCompat.PRIORITY_MAX
-            setAutoCancel(true)
-            setCategory(NotificationCompat.CATEGORY_PROMO)
-        }.build().let { notification ->
-            (getSystemService(NOTIFICATION_SERVICE) as NotificationManager
-                    ).notify(System.currentTimeMillis().toInt(), notification)
-        }
+        val notification = NotificationCompat.Builder(this, "canal_importante")
+            .setSmallIcon(R.drawable.ic_notification)
+            .setContentTitle(title)
+            .setContentText(body)
+            .setStyle(NotificationCompat.BigTextStyle().bigText(body))
+            .setPriority(NotificationCompat.PRIORITY_MAX)
+            .setAutoCancel(true)
+            .setCategory(NotificationCompat.CATEGORY_PROMO)
+            .build()
+
+        (getSystemService(NOTIFICATION_SERVICE) as NotificationManager)
+            .notify(System.currentTimeMillis().toInt(), notification)
     }
+
 }
